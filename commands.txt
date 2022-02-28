@@ -1,0 +1,170 @@
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git
+$ git init
+Initialized empty Git repository in C:/Users/91891/Desktop/git/.git/
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ ls
+alice.txt  bob.txt  sample.txt
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        alice.txt
+        bob.txt
+        sample.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ git add sample.txt
+warning: LF will be replaced by CRLF in sample.txt.
+The file will have its original line endings in your working directory
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   sample.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        alice.txt
+        bob.txt
+
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ git commit -m "THIS IS MINE FIRST COMMIT"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got '91891@DESKTOP-5H3ALSM.(none)')
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ git config --global user.name "PENUGONDA SAI VENKATA AKASH"
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ git config --global user.email "penugondasaivenkataakash@gmail.com"
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ git commit -m "THIS IS MY FIRST COMMIT"
+[master (root-commit) 6274563] THIS IS MY FIRST COMMIT
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sample.txt
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        alice.txt
+        bob.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=PENUGONDA SAI VENKATA AKASH
+user.email=penugondasaivenkataakash@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ git log
+commit 627456339e72ef03372dc04b659488362fe325ab (HEAD -> master)
+Author: PENUGONDA SAI VENKATA AKASH <penugondasaivenkataakash@gmail.com>
+Date:   Mon Feb 28 11:53:33 2022 +0530
+
+    THIS IS MY FIRST COMMIT
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        alice.txt
+        bob.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ cat alice.txt
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ nano alice.txt
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ nano bob.txt
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ git add .
+warning: LF will be replaced by CRLF in alice.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in bob.txt.
+The file will have its original line endings in your working directory
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   alice.txt
+        new file:   bob.txt
+
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ git commit -m "MY SECOND COMMIT"
+[master acaba4e] MY SECOND COMMIT
+ 2 files changed, 2 insertions(+)
+ create mode 100644 alice.txt
+ create mode 100644 bob.txt
+
+91891@DESKTOP-5H3ALSM MINGW64 ~/desktop/git (master)
+$ git log
+commit acaba4ee0db4fc499ffa24e56cd68ea1fdf46e80 (HEAD -> master)
+Author: PENUGONDA SAI VENKATA AKASH <penugondasaivenkataakash@gmail.com>
+Date:   Mon Feb 28 12:01:14 2022 +0530
+
+    MY SECOND COMMIT
+
+commit 627456339e72ef03372dc04b659488362fe325ab
+Author: PENUGONDA SAI VENKATA AKASH <penugondasaivenkataakash@gmail.com>
+Date:   Mon Feb 28 11:53:33 2022 +0530
+
+    THIS IS MY FIRST COMMIT
+
